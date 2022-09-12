@@ -7,3 +7,7 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 28ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 3431)
 
 
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-09-11 21:46:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
