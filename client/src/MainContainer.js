@@ -3,12 +3,13 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 
 function MainContainer() {
+  const [errors, setErrors] = useState()
+  
   const login = <Login />
-  const signUp = <SignUp handleSignupClick={handleSignupClick} />
+  const signUp = <SignUp handleSignupClick={handleSignupClick} errors={errors} handleLoginClick={handleLoginClick} />
 
   const [currentPage, setCurrentPage] = useState(signUp)
   const [user, setUser] = useState()
-  const [errors, setErrors] = useState()
 
 
   function handleSignupClick(username, password) {
@@ -31,6 +32,10 @@ function MainContainer() {
           res.json().then((err) => setErrors(err.errors))
         }})
       };
+
+      function handleLoginClick() {
+        setCurrentPage(login)
+      }
 
 
   return (

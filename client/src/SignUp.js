@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-function SignUp({ handleSignupClick }) {
+function SignUp({ handleSignupClick, errors, handleLoginClick }) {
   const [username, setUsername] = useState()
   const [password, setPassword] = useState()
 
