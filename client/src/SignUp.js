@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SignUp({ handleSignupClick, handleLoginClick }) {
+function SignUp({ handleSignupClick, goToLoginClick }) {
   const [username, setUsername] = useState()
   const [password, setPassword] = useState()
 
@@ -25,7 +25,7 @@ function SignUp({ handleSignupClick, handleLoginClick }) {
       <br></br>
       <div>
         <p>Already signed up?</p>
-        <button className="normalButton" onClick={handleLoginClick}>Go to Login</button>
+        <button className="normalButton" onClick={goToLoginClick}>Go to Login</button>
       </div>
     </div>
   );

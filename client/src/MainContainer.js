@@ -3,10 +3,10 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 
 function MainContainer({ setUser }) {
-  const [errors, setErrors] = useState()
+  // const [errors, setErrors] = useState()
   
-  const login = <Login />
-  const signUp = <SignUp handleSignupClick={handleSignupClick} errors={errors} handleLoginClick={handleLoginClick} />
+  const login = <Login goToSignupClick={goToSignupClick} handleLoginClick={handleLoginClick} />
+  const signUp = <SignUp handleSignupClick={handleSignupClick} goToLoginClick={goToLoginClick} />
 
   const [currentPage, setCurrentPage] = useState(signUp)
 
@@ -25,8 +25,6 @@ function MainContainer({ setUser }) {
     }});
   }, []);
 
-
-
   function handleSignupClick(username, password) {
     fetch('/users', {
       method: 'POST',
@@ -37,20 +35,29 @@ function MainContainer({ setUser }) {
       body: JSON.stringify({
         username: username,
         password: password,
-      })})
-      .then((res) => {
-        if (res.ok) {
-          res.json().then((data) => setUser(data));
-          // navigate('/game/setup')
-          // window.scrollTo(0, 0);
-        } else {
-          res.json().then((err) => alert(err.errors))
-        }})
-      };
+    })})
+    .then((res) => {
+      if (res.ok) {
+        res.json().then((data) => setUser(data));
+        // navigate('/game/setup')
+        // window.scrollTo(0, 0);
+        setCurrentPage()
+      } else {
+        res.json().then((err) => alert(err.errors))
+      }})
+  };
 
-      function handleLoginClick() {
-        setCurrentPage(login)
-      }
+  function handleLoginClick() {
+
+  }
+
+  function goToLoginClick() {
+    setCurrentPage(login)
+  }
+
+  function goToSignupClick() {
+    setCurrentPage(signUp)
+  }
 
 
   return (
