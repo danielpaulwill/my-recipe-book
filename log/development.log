@@ -370,3 +370,63 @@ Processing by UsersController#create as */*
 Completed 201 Created in 224ms (Views: 0.5ms | ActiveRecord: 6.5ms | Allocations: 3473)
 
 
+Started GET "/me" for 127.0.0.1 at 2022-09-12 21:22:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-09-12 21:23:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-09-12 21:24:45 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.16ms)
+Completed 200 OK in 37ms (Views: 0.9ms | ActiveRecord: 14.9ms | Allocations: 4198)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-12 21:29:26 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.21ms)
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 4.5ms | Allocations: 811)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-12 21:30:44 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.17ms)
+Completed 200 OK in 19ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 795)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-12 21:31:10 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.12ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 791)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-09-12 21:37:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-09-12 21:37:39 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.15ms)
+Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 12.4ms | Allocations: 3991)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-12 21:37:43 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.18ms)
+Completed 200 OK in 21ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 807)
+
+

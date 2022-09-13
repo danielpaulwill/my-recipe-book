@@ -1,17 +1,31 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Login from "./Login";
 import SignUp from "./SignUp";
 
-function MainContainer() {
+function MainContainer({ setUser }) {
   const [errors, setErrors] = useState()
   
   const login = <Login />
   const signUp = <SignUp handleSignupClick={handleSignupClick} errors={errors} handleLoginClick={handleLoginClick} />
 
   const [currentPage, setCurrentPage] = useState(signUp)
-  const [user, setUser] = useState()
 
-  console.log({ user })
+  // Auto-login
+  useEffect(() => {
+    fetch("/me").then((res) => {
+      if (res.ok) {
+      res.json().then((user) => {
+        setUser(user)
+      });
+      // navigate('/game/play')
+      alert("You have auto logged in");
+    } else {
+      res.json().then((err) => alert(err.errors))
+      // navigate('/welcome')
+    }});
+  }, []);
+
+
 
   function handleSignupClick(username, password) {
     fetch('/users', {

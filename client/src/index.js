@@ -12,7 +12,7 @@ ReactDOM.render(
        <Route path='*' element={<App />} />
      </Routes>
    </BrowserRouter>, */}
-  <App />
+    <App />
    </React.StrictMode>,
   document.getElementById('root')
 );
