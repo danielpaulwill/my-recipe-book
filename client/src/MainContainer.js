@@ -11,6 +11,7 @@ function MainContainer() {
   const [currentPage, setCurrentPage] = useState(signUp)
   const [user, setUser] = useState()
 
+  console.log({ user })
 
   function handleSignupClick(username, password) {
     fetch('/users', {
@@ -29,7 +30,7 @@ function MainContainer() {
           // navigate('/game/setup')
           // window.scrollTo(0, 0);
         } else {
-          res.json().then((err) => setErrors(err.errors))
+          res.json().then((err) => alert(err.errors))
         }})
       };
 

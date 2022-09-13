@@ -36,3 +36,15 @@ p {
 #signup {
   text-align: center;
 }
+
+.errors1 {
+  color: red;
+  display: block;
+}
+
+.errors2 {
+  display: none;
+}
+
+
+
