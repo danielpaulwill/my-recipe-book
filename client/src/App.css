@@ -1,11 +1,38 @@
 #navbar {
-  background-color: red;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* width: 100vw; */
+  border: solid 3px red;
 }
 
 #logo {
   display: flex;
   flex-flow: row wrap;
-  background-color: blue;
+  text-align: center;
+  align-self: center;
 }
 
+.logo1 {
+  margin: auto 0;
+}
 
+#navigation {
+  display: flex;
+  flex-flow: row wrap;
+  align-self: center;
+}
+
+p {
+  padding: 0 15px;
+}
+
+#mainContainer {
+  border:solid 3px blue;
+  width: 75vw;  
+  margin: 0 auto;
+}
+
+#signup {
+  text-align: center;
+}

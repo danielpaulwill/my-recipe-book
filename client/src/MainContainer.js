@@ -27,7 +27,7 @@ function MainContainer() {
         if (res.ok) {
           res.json().then((data) => setUser(data));
           // navigate('/game/setup')
-          window.scrollTo(0, 0);
+          // window.scrollTo(0, 0);
         } else {
           res.json().then((err) => setErrors(err.errors))
         }})
@@ -39,8 +39,8 @@ function MainContainer() {
 
 
   return (
-    <div>
-      <h1>MainContainer</h1>
+    <div id='mainContainer'>
+      {/* <h1>MainContainer</h1> */}
       {currentPage}
     </div>
   );

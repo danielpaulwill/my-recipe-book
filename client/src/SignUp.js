@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 function SignUp({ handleSignupClick, errors, handleLoginClick }) {
   const [username, setUsername] = useState()
   const [password, setPassword] = useState()
@@ -10,7 +9,7 @@ function SignUp({ handleSignupClick, errors, handleLoginClick }) {
   }
 
   return (
-    <div id="welcome">
+    <div id="signup">
       <h3>Signup</h3>
       <form>
         <input className="textInput" type="text" placeholder="username" onChange={e => setUsername(e.target.value)}></input>
@@ -19,13 +18,9 @@ function SignUp({ handleSignupClick, errors, handleLoginClick }) {
         <input className="textInput" type="password" placeholder="password" onChange={e => setPassword(e.target.value)}></input>
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
         <button className="normalButton" onClick={onSignupClick}>Sign up</button>
       </form>
       <p className={(errors === '') ? 'errors2' : 'errors1'}>{errors}</p>
-      <br></br>
-      <br></br>
       <br></br>
       <br></br>
       <div>
